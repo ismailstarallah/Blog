@@ -1,7 +1,7 @@
 import React from 'react'
 
 const All_books_card = ({ book }) => {
-    const visibleText = book.description.length > 250 ? book.description.slice(0, 250) + "..." : book.description;
+    const visibleText = book.description.length > 270 ? book.description.slice(0, 270) + "..." : book.description;
     return (
         <div className="w-full h-[35vh] flex flex-col sm:flex-row bg-[#8f97ca]/30 rounded-2xl shadow-inner border-[1.5px] border-[#143931]">
             <div className="w-full sm:w-1/3 flex justify-center items-center">
@@ -19,10 +19,10 @@ const All_books_card = ({ book }) => {
                         {book.bookAuthor}
                     </span>
                 </p>
-                <div className="relative p-4">
+                <div className="relative p-4 pl-1">
                     <p className="text-black text-sm font-light font-inria-serif leading-loose">
                         {visibleText}
-                        {book.description.length > 250 && (
+                        {book.description.length > 270 && (
                             <span
                                 className="text-black font-normal font-['Inder'] leading-[20.80px] cursor-pointer ml-1 hover:underline"
                             >

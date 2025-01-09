@@ -6,12 +6,12 @@ import PopularBooks from '../Components/Home/PopularBooks'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Category />
       <Quotes />
       <PopularBooks />
-    </div>
+    </>
   )
 }
 
