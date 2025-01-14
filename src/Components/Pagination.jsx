@@ -24,11 +24,11 @@ const Pagination = ({ currentPage, totalPages, category, subcategory }) => {
             )}
             {totalPages > 1 ?
                 Array.from({ length: totalPages }, (_, index) => index + 1)
-                    .filter(page => Math.abs(page - currentPage) <= 1 || page === 1 || page === totalPages)
+                    .filter(page => Math.abs(page - currentPage) === 0 || page === 1 || page === totalPages)
                     .map((page, index, array) => (
                         <div key={page}>
                             {index > 0 && page - array[index - 1] > 1 && (
-                                <span className="px-3 py-1 mx-1">...</span>
+                                <span className="px-0 sm:px-3 py-1 mx-1">...</span>
                             )}
                             <button
                                 onClick={() => paginate(page, category, subcategory)}

@@ -32,10 +32,10 @@ const Footer = () => {
         </div>
 
         {/* Right Section: Subscribe */}
-        <div className="w-full sm:w-1/3">
+        <div className="w-full md:w-1/2 lg:w-1/3">
           <h3 className="text-xl font-bold mb-3 font-inria-serif">For Every Update</h3>
-          <form className="flex items-center  border-black border-2 rounded-md">
-            <input type="email" placeholder="Enter Email..." className="flex-grow outline-none text-black/70 active:bg-[#f3f3f3]  text-sm font-extralight font-['Inter'] leading-[3px] px-4" />
+          <form className="flex items-center border-black border-2 rounded-md">
+            <input type="email" placeholder="Enter Email..." className="flex-grow outline-none text-black/70 active:bg-[#f3f3f3] text-sm font-extralight font-['Inter'] leading-[3px] px-4" />
             <button type="submit" className="p-2 bg-black text-white font-inria-serif hover:bg-gray-800">
               SUBSCRIBE
             </button>
@@ -46,7 +46,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="container mx-auto flex flex-wrap justify-between items-center mt-6 border-t pt-4 text-sm font-semibold font-inria-serif">
         {/* Social Icons */}
-        <div className="flex space-x-4 ">
+        <div className="flex space-x-4">
           <div className="w-9 cursor-pointer">
             <img src={fb_icon} alt="" />
           </div>

@@ -3,7 +3,7 @@ import React from 'react'
 const All_books_card = ({ book }) => {
     const visibleText = book.description.length > 270 ? book.description.slice(0, 270) + "..." : book.description;
     return (
-        <div className="w-full h-[35vh] flex flex-col sm:flex-row bg-[#8f97ca]/30 rounded-2xl shadow-inner border-[1.5px] border-[#143931]">
+        <div className="w-full h-auto flex flex-col sm:flex-row bg-[#8f97ca]/30 rounded-2xl shadow-inner border-[1.5px] border-[#143931]">
             <div className="w-full sm:w-1/3 flex justify-center items-center">
                 <img
                     className="w-full h-full object-cover border-r-2 border-black rounded-l-xl"
@@ -36,4 +36,4 @@ const All_books_card = ({ book }) => {
     );
 }
 
-export default All_books_card
+export default All_books_card;
