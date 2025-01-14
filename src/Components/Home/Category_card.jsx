@@ -1,6 +1,7 @@
 import arrow_left from '../../assets/arrow_left.png'
 import arrow_right from '../../assets/arrow_right.png'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Category_card = () => {
     const [categories, setCategories] = useState([]);
@@ -33,7 +34,9 @@ const Category_card = () => {
     const handleNext = () => {
         setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, categories.length - 4));
     };
-
+    const handleCategoryClick = (category) => {
+        navigate(`/books?page=${1}&category=${category}`);
+    };
     return (
         <div className="flex flex-col items-center py-16">
             <div className="relative flex items-center w-full px-48 overflow-x-auto">
