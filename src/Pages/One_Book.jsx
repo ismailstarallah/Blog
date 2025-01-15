@@ -16,7 +16,7 @@ const One_Book = () => {
                 </div>
 
                 {/* Right Sidebar */}
-                <div className="hidden md:block mt-3 w-[28%] ml-8 bg-[#8f97ca]/20 rounded-tl-[30px] rounded-tr-[30px] shadow-[inset_0px_4px_4px_0px_rgba(0,0,0,0.25)] border border-black">
+                <div className="block mt-3 md:w-[28%] md:ml-8 bg-[#8f97ca]/20  rounded-[30px] shadow-[inset_0px_4px_4px_0px_rgba(0,0,0,0.25)] border border-black">
                     <Side_Bar />
                 </div>
             </div >

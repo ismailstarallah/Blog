@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import arrow_left from '../../assets/arrow_left.png'
 import arrow_right from '../../assets/arrow_right.png'
 import { useEffect, useState, useRef } from 'react'
@@ -65,7 +66,9 @@ const PopularBooks_card = () => {
                                 <div className="w-32 h-36  lg:w-64 lg:h-72 flex items-center justify-center">
                                     <img src={`http://localhost/php-blog/admin/upload/${book.image}`} alt={book.title} className="min-h-36 lg:min-h-64 max-w-32 lg:max-w-48  min-[1100px]:max-w-56 border rounded-[30px] shadow-[inset_0px_4px_4px_0px_rgba(0,0,0,0.25)] border-black object-cover" />
                                 </div>
-                                <p className="flex justify-center md:text-xl text-sm font-normal font-inria-serif">{book.title}</p>
+                                <Link to={`/book/${book.id}`}>
+                                    <p className="flex justify-center md:text-xl text-sm font-normal font-inria-serif">{book.title}</p>
+                                </Link>
                                 <p className="flex justify-center text-black/70 md:text-sm text-xs font-normal font-inria-serif leading-loose">{book.bookAuthor}</p>
                             </div>
                         ))}
@@ -83,7 +86,7 @@ const PopularBooks_card = () => {
                     />
                 </button>
             </div>
-        </div>
+        </div >
     );
 }
 

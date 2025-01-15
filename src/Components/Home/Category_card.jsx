@@ -72,7 +72,7 @@ const Category_card = () => {
                     ref={containerRef}
                     className="overflow-x-auto scrollbar-hide overflow-y-hidden w-full snap-x snap-mandatory"
                 >
-                    <div className="flex transition-transform duration-300">
+                    <div className="flex gap-2 transition-transform duration-300">
                         {categories.map((category, id) => (
                             <div
                                 key={id}

@@ -58,7 +58,7 @@ const Add_Comments = ({ id_book, setComments }) => {
                 <div className="flex flex-col px-2">
                     <label htmlFor="" className="pb-4 text-black text-[15px] font-medium font-['Inter']">Your Review</label>
                     <textarea
-                        className="flex-grow h-16 border md:w-[90%] bg-[#d9d9d9]/0 rounded-[10px] border-black text-black/70 active:bg-[#f3f3f3] font-extralight font-['Inter'] px-4"
+                        className="flex-grow h-16 border w-full bg-[#d9d9d9]/0 rounded-[10px] border-black text-black/70 active:bg-[#f3f3f3] font-extralight font-['Inter'] px-4"
                         id="multiLineInput" name="multiLineInput" rows="10" cols="30"
                         placeholder="Enter your comment here"
                         value={comment}

@@ -9,7 +9,7 @@ const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false); // État pour le menu mobile
 
     return (
-        <div className="flex justify-between items-center bg-[#8f97ca]/60 h-16 px-4">
+        <div className="flex justify-between items-center bg-[#8f97ca]/60 h-16 px-4 z-20">
             {/* Logo Section */}
             <div className="flex px-16 md:px-28 h-8 absolute">
                 <img src={logo} className="w-9 h-9" alt="Logo" />

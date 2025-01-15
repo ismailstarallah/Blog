@@ -17,7 +17,9 @@ const Show_Comments = ({ id_book, comments, setComments }) => {
                 setComments(data.data);
                 setNbrComment(data.totalComments);
             } catch (error) {
-                setError(error.message);
+                setError("Error fetching comments");
+                if (error instanceof Error) console.error(error.message);
+                else console.error('Error:', error);
             }
         }
         fetchComment();
@@ -32,20 +34,23 @@ const Show_Comments = ({ id_book, comments, setComments }) => {
         <>
             <div className='flex flex-col gap-4 p-4'>
                 <h2 className="px-8 text-black text-4xl font-medium font-['Inter'] leading-[64px]">Recent Feedbacks</h2>
-                {nbrcomments == 0 && <p>No comments yet</p>}
-                {comments.map((comment, index) => (
-                    <div key={index} className="flex flex-col gap-4">
-                        <div className="flex flex-row mx-10 p-2 bg-[#e8dbdb] rounded-[20px] border border-black">
-                            <img src="https://as1.ftcdn.net/jpg/07/03/86/10/1000_F_703861066_gNOwqrKENcaNU2eDH2El2fyhja6Nz6hv.webp" alt="user" className="w-1/6 mx-auto my-auto rounded-full" />
-                            <div className="flex flex-col w-3/4">
-                                <p className="text-black text-xl font-normal font-['Inter'] leading-8">{comment.nameUser}</p>
-                                <p className="text-black/75 text-[10px]-sm font-normal font-['Inter'] leading-none">{comment.comment}</p>
-                            </div>
-                        </div>
+                {comments.length == 0 ? <p>No comments yet</p> :
 
-                    </div>
-                ))}
+                    comments.map((comment, index) => (
+                        <div key={index} className="flex flex-col gap-4">
+                            <div className="flex flex-row mx-10 p-2 bg-[#e8dbdb] rounded-[20px] border border-black">
+                                <img src="https://as1.ftcdn.net/jpg/07/03/86/10/1000_F_703861066_gNOwqrKENcaNU2eDH2El2fyhja6Nz6hv.webp" alt="user" className="w-1/6 mx-auto my-auto rounded-full" />
+                                <div className="flex flex-col w-3/4">
+                                    <p className="text-black text-xl font-normal font-['Inter'] leading-8">{comment.nameUser}</p>
+                                    <p className="text-black/75 text-[10px]-sm font-normal font-['Inter'] leading-none">{comment.comment}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    ))
+                }
                 {limit < nbrcomments && <button onClick={() => setLimits(limit + 5)} className="mx-auto p-2 font-['Inter']">Read More...</button>}
+
             </div >
         </>
     )
